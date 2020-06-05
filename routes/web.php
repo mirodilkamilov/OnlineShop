@@ -21,7 +21,14 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+
 Route::get('/home',[
    'uses'=>'MyController@getHome',
    'as'=>'primaryHome'
 ]);
+
+Route::post('/register', [
+    'uses' => 'MyController@postRegister',
+    'as' => 'postRegister'
+]);
+
