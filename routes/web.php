@@ -20,3 +20,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::post('/register', [
+    'uses' => 'MyController@postRegister',
+    'as' => 'postRegister'
+]);
+
