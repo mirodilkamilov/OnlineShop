@@ -52,7 +52,7 @@
                 <a class="nav-link text-white" href="">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="">Features</a>
+                <a class="nav-link" href="">Products</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="">Pricing</a>
@@ -63,7 +63,6 @@
         </ul>
     </div>
 </nav>
-
     @yield('content')
 </body>
 </html>
