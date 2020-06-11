@@ -33,5 +33,10 @@ class MyController extends Controller
         return redirect()->route(back());
     }
 
+    public function getPrimaryHome()
+    {
+        return view('primary.home');
+    }
+
 
 }

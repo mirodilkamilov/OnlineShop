@@ -23,8 +23,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::get('/home',[
-   'uses'=>'MyController@getHome',
-   'as'=>'primaryHome'
+   'uses'=>'MyController@getPrimaryHome',
+   'as'=>'getPrimaryHome'
 ]);
 
 Route::post('/register', [

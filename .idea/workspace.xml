@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c12c2371-a2e5-4368-aa57-741f38148768" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/MyController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/layout.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MyController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/mainLayout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/mainLayout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/primary/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/primary/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -126,7 +128,9 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1cqx8GapWG2LUq5qiuJtFcTA2WV" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -137,6 +141,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="reference.idesettings.emmet.jsx" />
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -157,6 +162,21 @@
       <workItem from="1591269765265" duration="260000" />
       <workItem from="1591270619054" duration="4359000" />
       <workItem from="1591347936728" duration="240000" />
+      <workItem from="1591438179668" duration="681000" />
+      <workItem from="1591512568295" duration="3844000" />
+      <workItem from="1591521717450" duration="3062000" />
+      <workItem from="1591596892451" duration="1146000" />
+      <workItem from="1591598677858" duration="12169000" />
+      <workItem from="1591622814201" duration="645000" />
+      <workItem from="1591694926735" duration="8843000" />
+      <workItem from="1591717116709" duration="337000" />
+      <workItem from="1591717489814" duration="643000" />
+      <workItem from="1591718191686" duration="2412000" />
+      <workItem from="1591766759320" duration="5632000" />
+      <workItem from="1591779255748" duration="4845000" />
+      <workItem from="1591789018822" duration="1764000" />
+      <workItem from="1591792146770" duration="563000" />
+      <workItem from="1591868796253" duration="7790000" />
     </task>
     <servers />
   </component>
@@ -168,5 +188,13 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="517" y="295" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1591349842923" />
+    <state x="186" y="9" key="SettingsEditor" timestamp="1591514222524">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="186" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1591514222524" />
+    <state x="405" y="0" width="586" height="728" key="find.popup" timestamp="1591781164921">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="405" y="0" width="586" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1591781164921" />
   </component>
 </project>

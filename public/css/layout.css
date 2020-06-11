@@ -1,0 +1,49 @@
+/*      Basic CSS       */
+html,
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/*      Navigation      */
+nav{
+    background: #636b6f !important;
+}
+
+.navbar{
+    width: 100%;
+}
+
+/*      Slider          */
+.carousel-item{
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 80vh;
+}
+
+.carousel-control-prev,
+.carousel-control-next{
+    margin-top: 3.4em;
+}
+
+
+.carousel-control-next,
+.carousel-control-prev {
+    filter: invert(100%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
