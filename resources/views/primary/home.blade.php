@@ -16,15 +16,14 @@
 
             <div class="carousel-item" style="background-image: url(css/image2_mob.jpg);">
                 <div class="carousel-caption">
-                    <h5>Second slide label</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h5 style="color: #636b6f; margin-bottom: 0.1rem">SALES EVERYWHERE</h5>
+                    <a class="btn" href="">Read more</a>
                 </div>
             </div>
 
             <div class="carousel-item" style="background-image: url(css/image3_mob.jpg);">
                 <div class="carousel-caption">
-                    <h5>Third slide label</h5>
-                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                    <a class="btn" id="join" href="">Join us</a>
                 </div>
             </div>
         </div>

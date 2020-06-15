@@ -34,6 +34,29 @@ nav{
     filter: invert(100%);
 }
 
+/*      Caption     */
+.carousel-caption{
+    color: #000 !important;
+    padding-bottom: 0.4em !important;
+}
+.btn{
+    background-color: #636b6f !important;
+    color: #fff !important;
+    margin-bottom: 0.7rem;
+}
+.btn#join{
+    font-size: 1.2em !important;
+}
+.carousel-indicators li{
+    border-bottom: 0 solid transparent !important;
+    background-color: #636b6f !important;
+}
+ol{
+    margin-bottom: 1rem !important;
+}
+
+
+
 
 
 
