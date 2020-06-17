@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c12c2371-a2e5-4368-aa57-741f38148768" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/image2_mob.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/image2_mob.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/layout.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/mainLayout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/mainLayout.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/primary/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/primary/home.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -138,7 +138,8 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="reference.idesettings.emmet.jsx" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Less" />
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -178,6 +179,9 @@
       <workItem from="1591882908321" duration="4000" />
       <workItem from="1592115606741" duration="707000" />
       <workItem from="1592201616097" duration="5087000" />
+      <workItem from="1592290834677" duration="2290000" />
+      <workItem from="1592386114914" duration="3603000" />
+      <workItem from="1592389908038" duration="5888000" />
     </task>
     <servers />
   </component>
@@ -189,10 +193,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="517" y="295" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1591349842923" />
-    <state x="186" y="9" key="SettingsEditor" timestamp="1591514222524">
+    <state x="186" y="9" key="SettingsEditor" timestamp="1592386241234">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="186" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1591514222524" />
+    <state x="186" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1592386241234" />
     <state x="405" y="0" width="586" height="728" key="find.popup" timestamp="1591781164921">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -201,5 +205,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1592115793427" />
+    <state x="346" y="49" key="search.everywhere.popup" timestamp="1592386174270">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1592386174270" />
   </component>
 </project>

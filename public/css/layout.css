@@ -26,11 +26,6 @@ nav{
 .carousel-control-prev,
 .carousel-control-next{
     margin-top: 3.4em;
-}
-
-
-.carousel-control-next,
-.carousel-control-prev {
     filter: invert(100%);
 }
 
@@ -54,6 +49,36 @@ nav{
 ol{
     margin-bottom: 1rem !important;
 }
+
+/*      Features    */
+.services{
+    background-color: #636b6f;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0 0.5rem 0;
+}
+.card-deck{
+    margin: 0;
+    padding: 1rem;
+    background-color: #636b6f;
+    color: #fff;
+}
+.card-header{
+    background-color: #3f484c !important;
+}
+.card{
+    background-color: #636b6f !important;
+}
+.card-body{
+    padding: 1rem !important;
+}
+
+.card-body img{
+    width: calc(2rem + 60vw) !important;
+    padding-bottom: 1.1rem;
+}
+
+
 
 
 
