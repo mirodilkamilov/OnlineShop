@@ -72,5 +72,50 @@
         </div>
     </div>
 
+    <div class="social">
+        <ul class="list">
+            <li>
+                <a href="https://t.me/korzinka_uz" target="_blank">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="fa fa-telegram"></span>
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.instagram.com/korzinkauz/" target="_blank">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="fa fa-instagram"></span>
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.facebook.com/MirodilKamilov" target="_blank">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="fa fa-facebook"></span>
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.linkedin.com/login" target="_blank">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="fa fa-linkedin"></span>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+
 
 @endsection
