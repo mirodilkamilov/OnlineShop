@@ -50,7 +50,7 @@ ol{
     margin-bottom: 1rem !important;
 }
 
-/*      Features    */
+/*      Services    */
 .services{
     background-color: #e3e3e1;
     color: #3f484c;
@@ -90,36 +90,45 @@ ol{
 }
 
 /*      Footer      */
-
+.footer{
+    background-color: #636b6f;
+    color: #fff;
+    width: 100%;
+    min-height: 20vh;
+}
 
 /*      social     */
-
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 .social{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 20vh;
-    background-color: #636b6f;
+    padding-top: 1rem;
+}
+.social h3{
+    text-align: center;
 }
 .list{
+    margin: 1rem 0 0 0;
     position: relative;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    row-gap: 10px;
 }
 .list li{
     position: relative;
     list-style: none;
-    width: 60px;
-    height: 60px;
-    margin: 0 20px;
+    width: 3rem;
+    height: 3rem;
+    margin: 0.7rem  20px;
     transform-style: preserve-3d;
     transform: rotate(0) skew(0);
 }
 .list li span{
+    border-radius: 16px;
     position: absolute;
     top: 0;
     left: 0;
@@ -172,7 +181,6 @@ ul {
 .list li:nth-child(4):hover span{
     background-color: #0077b5;
 }
-
 
 .list li:nth-child(1) span{
     background-color: #0088cc;

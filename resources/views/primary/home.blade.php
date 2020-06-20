@@ -47,7 +47,8 @@
             </div>
             <div class="card-body">
                 <img src="css/delivery.png" alt="delivery">
-                <p class="card-text">We deliver to anywhere in the territory of Uzbekistan within <strong>3 working day</strong></p>
+                <p class="card-text">We deliver to anywhere in the territory of Uzbekistan within <strong>3 working
+                        day</strong></p>
             </div>
         </div>
 
@@ -72,50 +73,57 @@
         </div>
     </div>
 
-    <div class="social">
-        <ul class="list">
-            <li>
-                <a href="https://t.me/korzinka_uz" target="_blank">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span class="fa fa-telegram"></span>
-                </a>
-            </li>
 
-            <li>
-                <a href="https://www.instagram.com/korzinkauz/" target="_blank">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span class="fa fa-instagram"></span>
-                </a>
-            </li>
+    <!--        Footer              -->
+    <div class="footer">
 
-            <li>
-                <a href="https://www.facebook.com/MirodilKamilov" target="_blank">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span class="fa fa-facebook"></span>
-                </a>
-            </li>
+        <!--        Social media        -->
+        <div class="social">
+            <h3>FOLLOW US</h3>
+            <ul class="list">
+                <li>
+                    <a href="https://t.me/korzinka_uz" target="_blank">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span class="fa fa-telegram"></span>
+                    </a>
+                </li>
 
-            <li>
-                <a href="https://www.linkedin.com/login" target="_blank">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span class="fa fa-linkedin"></span>
-                </a>
-            </li>
-        </ul>
+                <li>
+                    <a href="https://www.instagram.com/korzinkauz/" target="_blank">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span class="fa fa-instagram"></span>
+                    </a>
+                </li>
 
+                <li>
+                    <a href="https://www.facebook.com/MirodilKamilov" target="_blank">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span class="fa fa-facebook"></span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.linkedin.com/login" target="_blank">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span class="fa fa-linkedin"></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium assumenda optio porro possimus sint
+            tempora vel velit. Alias, aliquam animi blanditiis dolorem id impedit magnam, numquam, placeat quasi
+            repellendus vel!</p>
     </div>
-
-
 @endsection
