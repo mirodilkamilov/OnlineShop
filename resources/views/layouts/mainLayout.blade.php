@@ -8,7 +8,8 @@
 
     <link rel="stylesheet" href="css/layout.css">
 
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/v4-shims.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -67,5 +68,85 @@
     </div>
 </nav>
     @yield('content')
+
+<!--        Footer              -->
+<div class="footer">
+
+    <!--        Social media        -->
+    <div class="social">
+        <h3>FOLLOW US</h3>
+        <ul class="list">
+            <li>
+                <a href="https://t.me/korzinka_uz" target="_blank">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="fa fa-telegram"></span>
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.instagram.com/korzinkauz/" target="_blank">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="fa fa-instagram"></span>
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.facebook.com/MirodilKamilov" target="_blank">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="fa fa-facebook"></span>
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.linkedin.com/login" target="_blank">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="fa fa-linkedin"></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="box">
+        <div class="sitemap">
+            <h6>SITE MAP</h6>
+            <a href=""><span>Home</span></a>
+            <a href=""><span>Shop</span></a>
+            <a href=""><span>Help</span></a>
+            <a href=""><span>About us</span></a>
+            <a href=""><span>Vacancy</span></a>
+        </div>
+
+        <div class="links">
+            <h6>HELPFUL LINKS</h6>
+            <a href=""><span>Services</span></a>
+            <a href=""><span>Support</span></a>
+            <a href=""><span>Privacy Policy</span></a>
+            <a href=""><span>Terms & Condition</span></a>
+        </div>
+
+        <div class="contact">
+            <h6 id="Hcontact">CONTACT</h6>
+            <i class="fas fa-map-marker-alt"><span><span class="inspan">&nbsp;</span>9, Ziyolilar str., M.Ulugbek district, Tashkent city</span></i>
+            <i class="fas fa-phone-alt"><span><span class="inspan">&nbsp;</span>+998 71 289-99-99</span></i>
+            <i class="far fa-envelope"><span><span class="inspan">&nbsp;</span>mirodilkamilov1999@gmail.com</span></i>
+        </div>
+    </div>
+
+    <div class="copyright">
+        All Right Reserved 2020, @OnlineShop
+    </div>
+</div>
 </body>
 </html>

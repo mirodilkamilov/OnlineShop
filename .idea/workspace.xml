@@ -4,6 +4,7 @@
     <list default="true" id="c12c2371-a2e5-4368-aa57-741f38148768" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/layout.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/mainLayout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/mainLayout.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/primary/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/primary/home.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -182,6 +183,7 @@
       <workItem from="1592386114914" duration="3603000" />
       <workItem from="1592389908038" duration="5888000" />
       <workItem from="1592543779585" duration="8342000" />
+      <workItem from="1592642727833" duration="9142000" />
     </task>
     <servers />
   </component>
