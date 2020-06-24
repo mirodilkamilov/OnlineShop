@@ -39,7 +39,6 @@
 
     <div class="services">
         <h1>Our services</h1>
-    </div>
     <div class="card-deck">
         <div class="card text-center">
             <div class="card-header">
@@ -71,5 +70,6 @@
                 <p class="card-text">You can pay by card online or by cash after receiving product</p>
             </div>
         </div>
+    </div>
     </div>
 @endsection
