@@ -37,39 +37,46 @@
         </a>
     </div>
 
+    <h1 id="Hservices">Our services</h1>
     <div class="services">
-        <h1>Our services</h1>
-    <div class="card-deck">
-        <div class="card text-center">
-            <div class="card-header">
-                Fast and safe delivery
+        <div class="delivery">
+            <div class="imgpart">
+                <img src="css/images/delivery.png" alt="">
             </div>
-            <div class="card-body">
-                <img src="css/delivery.png" alt="delivery">
-                <p class="card-text">We deliver to anywhere in the territory of Uzbekistan within <strong>3 working
-                        day</strong></p>
+            <div class="text">
+                <h5>Fast and safe delivery</h5>
+                <p class="card-text">We deliver anywhere in the territory of Uzbekistan within three working days</p>
             </div>
         </div>
 
-        <div class="card text-center">
-            <div class="card-header">
-                Guarantee
+        <div class="guarantee">
+            <div class="imgpart">
+                <img src="css/images/guarantee.png" alt="">
             </div>
-            <div class="card-body">
-                <img src="css/guarantee.png" alt="guarantee">
-                <p class="card-text">We guarantee all our products for <strong>1 year</strong></p>
+            <div class="text">
+                <h5>Guarantee</h5>
+                <p class="card-text">We guarantee all our products for one year</p>
             </div>
         </div>
 
-        <div class="card text-center">
-            <div class="card-header">
-                Pay any way
+        <div class="pay">
+            <div class="imgpart">
+                <img src="css/images/pay.png" alt="">
             </div>
-            <div class="card-body">
-                <img src="css/pay.jpg" alt="pay">
-                <p class="card-text">You can pay by card online or by cash after receiving product</p>
+            <div class="text">
+                <h5>Pay any way</h5>
+                <p class="card-text">You can pay by card online or by cash after receiving a product</p>
             </div>
         </div>
-    </div>
+
+        <div class="support">
+            <div class="imgpart">
+                <img src="css/images/support.gif" alt="">
+            </div>
+            <div class="text">
+                <h5>Product service</h5>
+                <p class="card-text">We can service our products cheap if it is needed</p>
+            </div>
+        </div>
     </div>
 @endsection

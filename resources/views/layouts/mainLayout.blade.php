@@ -140,7 +140,7 @@
             <h6 id="Hcontact">CONTACT</h6>
             <i class="fas fa-map-marker-alt"><span><span class="inspan">&nbsp;</span>9, Ziyolilar str., M.Ulugbek district, Tashkent city</span></i>
             <i class="fas fa-phone-alt"><span><span class="inspan">&nbsp;</span>+998 71 289-99-99</span></i>
-            <i class="far fa-envelope"><span><span class="inspan">&nbsp;</span>mirodilkamilov1999@gmail.com</span></i>
+            <i class="far fa-envelope"><span><span class="inspan">&nbsp;</span>info@gmail.com</span></i>
         </div>
     </div>
 
