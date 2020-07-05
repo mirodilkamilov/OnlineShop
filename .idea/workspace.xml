@@ -3,13 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="c12c2371-a2e5-4368-aa57-741f38148768" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/delivery.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/delivery.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/guarantee.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/image1_mob.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/image1_mob.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/delivery.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/image1_mob.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/image2_mob.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/image3_mob.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/layout.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/pay.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/pay.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/services.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/mainLayout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/mainLayout.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/primary/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/primary/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +203,17 @@
       <workItem from="1593077897398" duration="7107000" />
       <workItem from="1593154551540" duration="2097000" />
       <workItem from="1593169389174" duration="2546000" />
-      <workItem from="1593185430963" duration="1274000" />
+      <workItem from="1593185430963" duration="1775000" />
+      <workItem from="1593188696211" duration="45000" />
+      <workItem from="1593324493859" duration="5171000" />
+      <workItem from="1593411801503" duration="9438000" />
+      <workItem from="1593495690905" duration="1945000" />
+      <workItem from="1593582823907" duration="3000" />
+      <workItem from="1593586421053" duration="617000" />
+      <workItem from="1593847899060" duration="247000" />
+      <workItem from="1593856021987" duration="11816000" />
+      <workItem from="1593925286322" duration="5698000" />
+      <workItem from="1593963442249" duration="2674000" />
     </task>
     <servers />
   </component>

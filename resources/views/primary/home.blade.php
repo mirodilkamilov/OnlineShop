@@ -7,21 +7,21 @@
             <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active" style="background-image: url(css/image1_mob.jpg)">
+            <div class="carousel-item active" id="firstSlide">
                 <div class="carousel-caption text-center">
                     <h5>First slide label</h5>
                     <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                 </div>
             </div>
 
-            <div class="carousel-item" style="background-image: url(css/image2_mob.jpg);">
+            <div class="carousel-item" id="secondSlide">
                 <div class="carousel-caption">
-                    <h5 style="color: #636b6f; margin-bottom: 0.1rem">SALES EVERYWHERE</h5>
+                    <h5 id="saleText">SALES EVERYWHERE</h5>
                     <a class="btn" href="">Read more</a>
                 </div>
             </div>
 
-            <div class="carousel-item" style="background-image: url(css/image3_mob.jpg);">
+            <div class="carousel-item" id="thirdSlide">
                 <div class="carousel-caption">
                     <a class="btn" id="join" href="">Join us</a>
                 </div>
@@ -36,6 +36,15 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
+
+    <!--    Script for not pausing slider in bigger screens    -->
+    <script>
+        if(screen.width >= 961) {
+            $('.carousel').carousel({
+                pause: false
+            })
+        }
+    </script>
 
     <h1 id="Hservices">Our services</h1>
     <div class="services">

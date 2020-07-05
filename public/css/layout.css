@@ -6,14 +6,59 @@ body{
     width: 100%;
 }
 
-/*      Navigation      */
+/*      Navbar      */
 nav{
     background: #636b6f !important;
 }
-
 .navbar{
     width: 100%;
+    padding: 0 0.7rem !important;
 }
+.navbar-brand{
+    padding: 3px 0 3px 0 !important;
+    display: flex !important;
+    align-items: center;
+}
+.navbar-nav{
+    padding: 0.25rem 0;
+}
+.logo-name{
+    padding-left: .5rem;
+}
+.nav-link{
+    color: #fff !important;
+    font-weight: 500;
+    line-height: 1.7;
+    border-radius: 20px;
+}
+.dropdown{
+    position: static !important;
+}
+.dropdown-menu{
+    margin-top: 0 !important;
+    border: none !important;
+    border-radius: 0 !important;
+    background-color: #f5f5f5 !important;
+    width: 100vw;
+    height: auto;
+}
+.gradient{
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background-size: 300%;
+    z-index: 1;
+}
+.gradient:hover{
+    animation: animate 8s linear infinite;
+}
+@keyframes animate{
+    0%{
+        background-position: 0%;
+    }
+    100%{
+        background-position: 300%;
+    }
+}
+
 
 /*      Slider          */
 .carousel-item{
@@ -22,6 +67,15 @@ nav{
     background-repeat: no-repeat;
     height: 80vh;
 }
+.carousel-item#firstSlide{
+    background-image: url('images/image1_mob.jpg');
+}
+.carousel-item#secondSlide{
+    background-image: url('images/image2_mob.jpg');
+}
+.carousel-item#thirdSlide{
+    background-image: url('images/image3_mob.jpg');
+}
 
 .carousel-control-prev,
 .carousel-control-next{
@@ -29,10 +83,15 @@ nav{
     filter: invert(100%);
 }
 
-/*      Caption     */
+
+/*      Slider Caption     */
 .carousel-caption{
     color: #000 !important;
     padding-bottom: 0.4em !important;
+}
+.carousel-caption h5#saleText{
+    color: #000;
+    margin-bottom: 0.1rem;
 }
 .btn{
     background-color: #636b6f !important;
@@ -311,6 +370,44 @@ ul {
     }
     .contact{
         max-width: 274px;
+    }
+}
+
+@media (min-width: 961px){   /*  tablet, landscape iPad, lo-res laptops ands desktops    */
+    .nav-link:hover{
+        background-color: white !important;
+        color: black !important;
+    }
+    .gradient:hover{
+        color: #fff !important;
+    }
+    .dropdown:hover > .dropdown-menu {
+        display: block;
+    }
+
+    .carousel-item{
+        height: 100vh;
+    }
+    .carousel-item#firstSlide{
+        background-image: url('images/image1_desk.jpg');
+    }
+    .carousel-item#secondSlide{
+        background-image: url('images/image2_desk.jpg');
+    }
+    .carousel-item#thirdSlide{
+        background-image: url('images/image3_desk.jpg');
+    }
+    .carousel-caption h5#saleText{
+        display: none;
+    }
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon{
+        width: 1.5rem !important;
+        height: 1.5rem !important;
+    }
+    .carousel-control-next,
+    .carousel-control-prev {
+        opacity: 0.8 !important;
     }
 }
 @media (min-width: 1025px) {        /*  big landscape tablets, laptops, and desktops    */
