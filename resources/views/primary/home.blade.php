@@ -39,7 +39,7 @@
 
     <!--    Script for not pausing slider in bigger screens    -->
     <script>
-        if(screen.width >= 961) {
+        if(window.innerWidth >= 961) {
             $('.carousel').carousel({
                 pause: false
             })

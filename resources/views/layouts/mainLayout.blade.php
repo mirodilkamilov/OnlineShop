@@ -33,38 +33,35 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item dropdown">
-                <a class="nav-link text-white" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"
-                   href="">SHOP&nbsp;NOW</a>
+                <a class="nav-link text-white link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"
+                   href="">SHOP&nbsp;NOW<span class="fas fa-plus"></span></a>
+
                 <div class="dropdown-menu">
-                    something here
+                    <span class="dropdown-header">Types of laptops depending on usage</span>
+                    <ul class="menu1-mob">
+                        <li><a class="dropdown-item" href=""><i class="far fa-building"></i>Office Work</a></li>
+                        <li><a class="dropdown-item" href=""><i class="fas fa-home"></i>Home</a></li>
+                        <li><a class="dropdown-item" href=""><i class="fas fa-gamepad"></i>Gaming</a></li>
+                        <li><a class="dropdown-item" href=""><i class="fas fa-tachometer-alt"></i>Special</a></li>
+                    </ul>
                 </div>
             </li>
 
-            <!--    Hower effect on dropdown menu   -->
-            <script>
-                function toggleDropdown (e) {
-                    const _d = $(e.target).closest('.dropdown'),
-                        _m = $('.dropdown-menu', _d);
-                    setTimeout(function(){
-                        const shouldOpen = e.type !== 'click' && _d.is(':hover');
-                        _m.toggleClass('show', shouldOpen);
-                        _d.toggleClass('show', shouldOpen);
-                        $('[data-toggle="dropdown"]', _d).attr('aria-expanded', shouldOpen);
-                    }, e.type === 'mouseleave' ? 300 : 0);
-                }
-                $('body')
-                    .on('mouseenter mouseleave','.dropdown',toggleDropdown)
-                    .on('click', '.dropdown-menu a', toggleDropdown);
-            </script>
-
-            <li class="nav-item">
-                <a class="nav-link" href="">Services</a>
-            </li>
             <li class="nav-item dropdown">
-                <a class="nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="">Support</a>
+                <a class="nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="">Services
+                    <span class="fas fa-plus"></span></a>
                 <div class="dropdown-menu">
-                    Support Lorem ipsum dolor.
+                    <ul class="menu2-mob">
+                        <span class="dropdown-header">We are at your service</span>
+                        <li><a class="dropdown-item" href=""><i class="fas fa-shipping-fast"></i>Delivery</a></li>
+                        <li><a class="dropdown-item" href=""><i class="fas fa-shield-alt"></i>Guarantee</a></li>
+                        <li><a class="dropdown-item" href=""><i class="fas fa-medkit"></i>Product service</a></li>
+                        <li><a class="dropdown-item" href=""><i class="fas fa-comments-dollar"></i>Pay any way</a></li>
+                    </ul>
                 </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">Vacancy</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="">About</a>
@@ -153,7 +150,8 @@
 
         <div class="contact">
             <h6 id="Hcontact">CONTACT</h6>
-            <i class="fas fa-map-marker-alt"><span><span class="inspan">&nbsp;</span>9, Ziyolilar str., M.Ulugbek district, Tashkent city</span></i>
+            <i class="fas fa-map-marker-alt"><span><span class="inspan">&nbsp;</span>9, Ziyolilar str., M.Ulugbek district,
+                    Tashkent city</span></i>
             <i class="fas fa-phone-alt"><span><span class="inspan">&nbsp;</span>+998 71 289-99-99</span></i>
             <i class="far fa-envelope"><span><span class="inspan">&nbsp;</span>info@gmail.com</span></i>
         </div>
@@ -163,5 +161,25 @@
         All Right Reserved 2020, @OnlineShop
     </div>
 </div>
+
+<!--    Hover effect on dropdown menu   -->
+<script>
+    if (window.innerWidth >= 992) {
+        function toggleDropdown(e) {
+            const _d = $(e.target).closest('.dropdown'),
+                _m = $('.dropdown-menu', _d);
+            setTimeout(function () {
+                const shouldOpen = e.type !== 'click' && _d.is(':hover');
+                _m.toggleClass('show', shouldOpen);
+                _d.toggleClass('show', shouldOpen);
+                $('[data-toggle="dropdown"]', _d).attr('aria-expanded', shouldOpen);
+            }, e.type === 'mouseleave' ? 300 : 0);
+        }
+        $('body')
+            .on('mouseenter mouseleave', '.dropdown', toggleDropdown)
+            .on('click', '.dropdown-menu a', toggleDropdown);
+    }
+</script>
+
 </body>
 </html>
