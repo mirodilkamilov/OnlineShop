@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="css/layout.css">
 
+    <!--        font awesome 5.13.1    -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/v4-shims.css">
 
@@ -16,6 +17,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <!--        Jquery 3.5.1    -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 
     <title>OnlineShop</title>
 </head>
@@ -39,25 +43,25 @@
                 <div class="dropdown-menu">
                     <ul class="menu1-mob">
                         <span class="dropdown-header">Types of laptops depending on usage</span>
-                        <li><a class="dropdown-item" href=""><i class="far fa-building"></i>Work</a></li>
-                        <li><a class="dropdown-item" href=""><i class="fas fa-home"></i>Everyday Use</a></li>
-                        <li><a class="dropdown-item" href=""><i class="fas fa-gamepad"></i>Gaming</a></li>
-                        <li><a class="dropdown-item" href=""><i class="fas fa-tachometer-alt"></i>Student</a></li>
-                        <li><a class="dropdown-item" href=""><i class="fas fa-tachometer-alt"></i>Creativity & Entertainment</a></li>
+                        <li><a class="dropdown-item" href=""><img class="icons" src="/css/images/work-icon.png">Work</a></li>
+                        <li><a class="dropdown-item" href=""><img class="icons" src="/css/images/everyday-icon.png">Everyday Use</a></li>
+                        <li><a class="dropdown-item" href=""><img class="icons" src="/css/images/gaming-icon.png">Gaming</a></li>
+                        <li><a class="dropdown-item" href=""><img class="icons" src="/css/images/student-icon.png">Student</a></li>
+                        <li><a class="dropdown-item" href=""><img class="icons" src="/css/images/creativty-icon.png">Creativity & Entertainment</a></li>
                     </ul>
 
                     <div class="menu1-desk">
-                        <ul class="laptop-types-list">
+                        <ul class="laptop-types-list" id="laptop-types-list">
                             <h5 class="dropdown-header">Types of laptops depending on usage</h5>
-                            <li><a class="dropdown-item work-laptop" id="work-laptop" onmouseover="dispalayImage(this)" onmouseout="removeImage(this)" href=""><img class="icons" src="/css/images/work-icon.png">Work</a></li>
+                            <li><a class="dropdown-item work-laptop" id="work-laptop" href=""><img class="icons" src="/css/images/work-icon.png">Work</a></li>
 
-                            <li><a class="dropdown-item everyday-laptop" id="everyday-laptop" href="" onmouseover="dispalayImage(this)" onmouseout="removeImage(this)"><img class="icons" src="/css/images/everyday-icon.png">Everyday Use</a></li>
+                            <li><a class="dropdown-item everyday-laptop" id="everyday-laptop" href=""><img class="icons" src="/css/images/everyday-icon.png">Everyday Use</a></li>
 
-                            <li><a class="dropdown-item gaming-laptop" id="gaming-laptop" href="" onmouseover="dispalayImage(this)" onmouseout="removeImage(this)"><img class="icons" src="/css/images/gaming-icon.png">Gaming</a></li>
+                            <li><a class="dropdown-item gaming-laptop" id="gaming-laptop" href=""><img class="icons" src="/css/images/gaming-icon.png">Gaming</a></li>
 
-                            <li><a class="dropdown-item student-laptop" id="student-laptop" href="" onmouseover="dispalayImage(this)" onmouseout="removeImage(this)"><img class="icons" src="/css/images/student-icon.png">Student</a></li>
+                            <li><a class="dropdown-item student-laptop" id="student-laptop" href=""><img class="icons" src="/css/images/student-icon.png">Student</a></li>
 
-                            <li><a class="dropdown-item creativity-laptop" id="creativity-laptop" href="" onmouseover="dispalayImage(this)" onmouseout="removeImage(this)"><img class="icons" src="/css/images/creativty-icon.png">Creativity & Entertainment</a></li>
+                            <li><a class="dropdown-item creativity-laptop" id="creativity-laptop" href=""><img class="icons" src="/css/images/creativty-icon.png">Creativity & Entertainment</a></li>
                         </ul>
                         <div class="menu-image">
                             <img class="logo-image" id="logo-image" src="/css/images/logo.png" alt="logo">
@@ -90,131 +94,13 @@
                                 <li>Rugged & durable</li>
                                 <li>Homework & reports</li>
                                 <li>Videoconferencing</li>
-                                <li>Entertainment</li>
                             </ul>
-                            <ul id="creativty-description">
+                            <ul id="creativity-description">
                                 <li>Photo / video editing</li>
                                 <li>Music / sound mixing</li>
                                 <li>Design & engineering applications</li>
                             </ul>
                         </div>
-
-                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-                        <script>
-                        $(document).ready(function(){
-                            $("#work-laptop").mouseover(function(){
-                                $("#work-laptop-image").show(1000);
-                                $("#work-description").show(1000,1000);
-                            });
-                            $("#everyday-laptop").mouseover(function(){
-                                $("#everyday-laptop-image").show(1000);
-                                $("#everyday-description").show(1000);
-                            });
-                            $("#gaming-laptop").mouseover(function(){
-                                $("#gaming-laptop-image").show(1000);
-                                $("#gaming-description").show(1000);
-                            });
-                            $("#student-laptop").mouseover(function(){
-                                $("#student-laptop-image").show(1000);
-                                $("#student-description").show(1000);
-                            });
-                            $("#creativity-laptop").mouseover(function(){
-                                $("#creativity-laptop-image").show(1000);
-                                $("#creativty-description").show(1000);
-                            });
-
-                            $("#work-laptop").mouseout(function(){
-                                $("#work-laptop-image").hide(1000);
-                                $("#work-description").hide(1000);
-                            });
-                            $("#everyday-laptop").mouseout(function(){
-                                $("#everyday-laptop-image").hide(1000);
-                                $("#everyday-description").hide(1000);
-                            });
-                            $("#gaming-laptop").mouseout(function(){
-                                $("#gaming-laptop-image").hide(1000);
-                                $("#gaming-description").hide(1000);
-                            });
-                            $("#student-laptop").mouseout(function(){
-                                $("#student-laptop-image").hide(1000);
-                                $("#student-description").hide(1000);
-                            });
-                            $("#creativty-laptop").mouseout(function(){
-                                $("#creativty-laptop-image").hide(1000);
-                                $("#creativty-description").hide(1000);
-                            });
-                        });
-                        </script>
-
-                        {{-- <script>
-                            function dispalayImage(x) {
-                                // document.getElementsById("defoult-description").style.display = "block";
-                    
-                                document.getElementById("logo-image").style.visibility = "hidden";
-                                document.getElementById("logo-image").style.opacity = "0";
-                                document.getElementById("logo-image").style.transition = "visibility 0s, opacity 0.5s linear";
-                                
-                                switch(x){
-                                    case document.getElementById("work-laptop"):
-                                        document.getElementById("work-laptop-image").style.visibility = "visible";
-                                        document.getElementById("work-laptop-image").style.opacity = "1";
-                                        document.getElementById("work-description").style.visibility = "visible";
-                                        // document.getElementById("work-description").style.opacity = "1";
-                                        break;
-                                    case (document.getElementById("everyday-laptop")):
-                                        document.getElementById("everyday-laptop-image").style.visibility = "visible";
-                                        document.getElementById("everyday-laptop-image").style.opacity = "1";
-                                        break; 
-                                    case (document.getElementById("gaming-laptop")):
-                                        document.getElementById("gaming-laptop-image").style.visibility = "visible";
-                                        document.getElementById("gaming-laptop-image").style.opacity = "1";
-                                        break;
-                                    case (document.getElementById("student-laptop")):
-                                        document.getElementById("student-laptop-image").style.visibility = "visible";
-                                        document.getElementById("student-laptop-image").style.opacity = "1";
-                                        break; 
-                                    case (document.getElementById("creativity-laptop")):
-                                        document.getElementById("creativity-laptop-image").style.visibility = "visible";
-                                        document.getElementById("creativity-laptop-image").style.opacity = "1";
-                                        break; 
-                                }
-                            }
-                            function removeImage(x) {
-                                switch(x){
-                                    case document.getElementById("work-laptop"):
-                                        document.getElementById("work-laptop-image").style.visibility = "hidden";
-                                        document.getElementById("work-laptop-image").style.opacity = "0";
-                                        document.getElementById("work-laptop-image").style.transition = "visibility 0s, opacity 1.5s linear";
-
-                                        document.getElementById("work-description").style.visibility = "hidden";
-                                        document.getElementById("work-description").style.opacity = "0";
-                                        document.getElementById("work-description").style.transition = "visibility 0s, opacity 1.5s linear";
-                                        break;
-                                    case (document.getElementById("everyday-laptop")):
-                                        document.getElementById("everyday-laptop-image").style.visibility = "hidden";
-                                        document.getElementById("everyday-laptop-image").style.opacity = "0";
-                                        document.getElementById("everyday-laptop-image").style.transition = "visibility 0s, opacity 1.5s linear";
-                                        break; 
-                                    case (document.getElementById("gaming-laptop")):
-                                        document.getElementById("gaming-laptop-image").style.visibility = "hidden";
-                                        document.getElementById("gaming-laptop-image").style.opacity = "0";
-                                        document.getElementById("gaming-laptop-image").style.transition = "visibility 0s, opacity 1.5s linear";
-                                        break;
-                                    case (document.getElementById("student-laptop")):
-                                        document.getElementById("student-laptop-image").style.visibility = "hidden";
-                                        document.getElementById("student-laptop-image").style.opacity = "0";
-                                        document.getElementById("student-laptop-image").style.transition = "visibility 0s, opacity 1.5s linear";
-                                        break;
-                                    case (document.getElementById("creativity-laptop")):
-                                        document.getElementById("creativity-laptop-image").style.visibility = "hidden";
-                                        document.getElementById("creativity-laptop-image").style.opacity = "0";
-                                        document.getElementById("creativity-laptop-image").style.transition = "visibility 0s, opacity 1.5s linear";
-                                        break; 
-                                }
-                                document.getElementById("logo-image").style.visibility = "visible";
-                                document.getElementById("logo-image").style.opacity = "1";
-                            }
-                        </script>              --}}
                     </div>
                 </div>
             </li>
@@ -334,7 +220,7 @@
     </div>
 </div>
 
-<!--    Hover effect on dropdown menu   -->
+<!--    Hover navbar element to show dropdown menu   -->
 <script>
     if (window.innerWidth >= 992) {
         function toggleDropdown(e) {
@@ -352,6 +238,180 @@
             .on('click', '.dropdown-menu a', toggleDropdown);
     }
 </script>
+
+<!--    Script for animating images and description in dropdown-menu on hover   -->
+<script>
+                        
+    $(document).ready(function(){
+        $("#laptop-types-list").mouseenter(function()
+        {
+            $("#defoult-description")
+            .animate({opacity: '0'}, {duration: 2000});
+            
+            $("#logo-image").animate
+            ({
+                opacity: '0'
+                }, { duration: 2000
+            });
+        });
+
+        $("#laptop-types-list").mouseleave(function()
+        {
+            $("#defoult-description").animate
+            ({
+                opacity: '1'
+                }, { duration: 1200
+            });
+            $("#logo-image").animate
+            ({
+                opacity: '1'
+                }, { duration: 1200
+            });
+        });
+
+        $("#work-laptop").mouseenter(function()
+        {
+            $("#work-laptop-image").show(1000).animate
+            ({
+                opacity: '1'
+                }, { duration: 1200, queue: false 
+            });
+            $("#work-description").show(1000).animate
+            ({
+                opacity: '1'
+                }, { duration: 1200, queue: false 
+            });
+        });
+
+        $("#work-laptop").mouseleave(function()
+        {
+            $("#work-laptop-image").animate
+            ({
+                opacity: '0'
+                }, { duration: 1200, queue: false 
+            });
+            $("#work-description").animate
+            ({
+                opacity: '0'
+                }, { duration: 1200, queue: false 
+            });
+        });
+
+        $("#everyday-laptop").mouseenter(function()
+        {
+            $("#everyday-laptop-image").show(1000).animate
+            ({
+                opacity: '1'
+                }, { duration: 1200, queue: false 
+            });
+            $("#everyday-description").show(1000).animate
+            ({
+                opacity: '1'
+                }, { duration: 1200, queue: false 
+            });
+        });
+
+        $("#everyday-laptop").mouseleave(function()
+        {
+            $("#everyday-laptop-image").animate
+            ({
+                opacity: '0'
+                }, { duration: 1200, queue: false 
+            });
+            $("#everyday-description").animate
+            ({
+                opacity: '0'
+                }, { duration: 1200, queue: false 
+            });
+        });
+
+
+        $("#gaming-laptop").mouseenter(function()
+        {
+            $("#gaming-laptop-image").show(1000).animate
+            ({
+                opacity: '1'
+                }, { duration: 1200, queue: false 
+            });
+            $("#gaming-description").show(1000).animate
+            ({
+                opacity: '1'
+                }, { duration: 1200, queue: false 
+            });
+        });
+
+        $("#gaming-laptop").mouseleave(function()
+        {
+            $("#gaming-laptop-image").animate
+            ({
+                opacity: '0'
+                }, { duration: 1200, queue: false 
+            });
+            $("#gaming-description").animate
+            ({
+                opacity: '0'
+                }, { duration: 1200, queue: false 
+            });
+        });
+
+        $("#student-laptop").mouseenter(function()
+        {
+            $("#student-laptop-image").show(1000).animate
+            ({
+                opacity: '1'
+                }, { duration: 1200, queue: false 
+            });
+            $("#student-description").show(1000).animate
+            ({
+                opacity: '1'
+                }, { duration: 1200, queue: false 
+            });
+        });
+
+        $("#student-laptop").mouseleave(function()
+        {
+            $("#student-laptop-image").animate
+            ({
+                opacity: '0'
+                }, { duration: 1200, queue: false 
+            });
+            $("#student-description").animate
+            ({
+                opacity: '0'
+                }, { duration: 1200, queue: false 
+            });
+        });
+
+        $("#creativity-laptop").mouseenter(function()
+        {
+            $("#creativity-laptop-image").show(1000).animate
+            ({
+                opacity: '1'
+                }, { duration: 1200, queue: false 
+            });
+            $("#creativity-description").show(1000).animate
+            ({
+                opacity: '1'
+                }, { duration: 1200, queue: false 
+            });
+        });
+
+        $("#creativity-laptop").mouseleave(function()
+        {
+            $("#creativity-laptop-image").animate
+            ({
+                opacity: '0'
+                }, { duration: 1200, queue: false 
+            });
+            $("#creativity-description").animate
+            ({
+                opacity: '0'
+                }, { duration: 1200, queue: false 
+            });
+        });
+    
+    });
+    </script>
 
 </body>
 </html>
