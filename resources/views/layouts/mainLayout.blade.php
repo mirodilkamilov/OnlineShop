@@ -94,10 +94,10 @@
                             <img class="everyday-laptop-image" id="everyday-laptop-image" src="/css/images/everyday-laptop.jpg" alt="">
                             <img class="gaming-laptop-image" id="gaming-laptop-image" src="/css/images/gaming-laptop.png" alt="">
                             <img class="student-laptop-image" id="student-laptop-image" src="/css/images/student-laptop.jpg" alt="">
-                            <img class="creativity-laptop-image" id="creativity-laptop-image" src="/css/images/creativity-laptop.png" alt="">
+                            <img class="creativity-laptop-image" id="creativity-laptop-image" src="/css/images/creativity-laptop.jpg" alt="">
                         </div>
                         <div class="menu-description">
-                            <ul id="defoult-description">
+                            <ul id="default-description">
                                 <li>Stay Home and Save the World</li>
                             </ul>
                             <ul id="work-description">
@@ -301,7 +301,7 @@
 
         $("#laptop-types-list").mouseleave(function()
         {
-            $("#defoult-description").animate
+            $("#default-description").animate
             ({
                 opacity: '1'
                 }, { duration: 1200
