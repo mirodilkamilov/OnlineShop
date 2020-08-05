@@ -8,6 +8,10 @@
 
     <link rel="stylesheet" href="css/layout.css">
 
+    <!--        google fonts: Montserrat and Italianno (for only logo text)  -->
+    <!--<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">-->
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+
     <!--        font awesome 5.13.1    -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/v4-shims.css">
@@ -21,25 +25,46 @@
     <!--        Jquery 3.5.1    -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 
-    <title>OnlineShop</title>
+    <title>LaptopShop</title>  
+
 </head>
 <body>
 
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
     <a class="navbar-brand" href="">
-        <img src="/css/images/logo.png" alt="" width="70px" height="48px" class="d-inline-block align-top" alt="" loading="lazy">
-        <span class="logo-name">OnlineShop</span>
+        <img src="/css/images/logo.png" alt="logo" width="70px" height="48px" class="d-inline-block align-top" loading="lazy">
+        <span class="logo-name">LaptopShop</span>
+        
     </a>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler" id="menu-button" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="menu-button">
+            <span id="first-line"></span>
+            <span id="second-line"></span>
+            <span id="third-line"></span>
+        </div>
     </button>
+
+    <script>
+        $(document).ready(function(){
+            $("#menu-button").click(function(){
+                $("#first-line").toggleClass("first-line");
+                $("#second-line").toggleClass("second-line");
+                $("#third-line").toggleClass("third-line");
+            });
+        });
+
+    </script>
+
+    {{-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button> --}}
+   
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-            <li class="nav-item dropdown">
-                <a class="nav-link text-white link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"
-                   href="">SHOP&nbsp;NOW<span class="fas fa-plus"></span></a>
-
+            <li class="nav-item dropdown nav-item-first shop-link" id="dropdown">
+                <a class="nav-link text-white link" data-toggle="dropdown" href="">SHOP&nbsp;NOW<span class="fas fa-plus"></span><i class="fas fa-chevron-down"></i></a>
+                
                 <div class="dropdown-menu">
                     <ul class="menu1-mob">
                         <span class="dropdown-header">Types of laptops depending on usage</span>
@@ -106,10 +131,10 @@
             </li>
 
             <li class="nav-item dropdown">
-                <a class="nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="">Services
-                    <span class="fas fa-plus"></span></a>
+                <a class="nav-link services-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="">Services
+                    <span class="fas fa-plus"></span><i class="fas fa-chevron-down"></i></a>
                 <div class="dropdown-menu">
-                    <ul class="menu2-mob">
+                    <ul class="menu2">
                         <span class="dropdown-header">We are at your service</span>
                         <li><a class="dropdown-item" href=""><i class="fas fa-shipping-fast"></i>Delivery</a></li>
                         <li><a class="dropdown-item" href=""><i class="fas fa-shield-alt"></i>Guarantee</a></li>
@@ -125,16 +150,26 @@
                 <a class="nav-link" href="">About</a>
             </li>
         </ul>
-        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link gradient" href="#">Register</a>
-                </li>
-            </ul>
-        </div>
+
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/register">Register</a>
+            </li>
+            <li class="nav-item nav-item-last">
+                <a class="nav-link" href="/login">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">About</a>
+            </li>
+        </ul>
+        <script>
+            $('#dropdown').on('show.bs.dropdown', function() {
+                $(this).find('#dropdown-menu').first().stop(true, true).slideDown();
+            });
+            $('#dropdown').on('hide.bs.dropdown', function() {
+                $(this).find('#dropdown-menu').first().stop(true, true).slideUp();
+            });
+        </script>   
     </div>
 </nav>
     @yield('content')
@@ -191,32 +226,41 @@
     <div class="box">
         <div class="sitemap">
             <h6>SITE MAP</h6>
-            <a href=""><span>Home</span></a>
-            <a href=""><span>Shop</span></a>
             <a href=""><span>Help</span></a>
-            <a href=""><span>About us</span></a>
+            <a href=""><span>Shop</span></a>
+            <a href=""><span>Home</span></a>
+            <a href=""><span>Sign Up</span></a>
             <a href=""><span>Vacancy</span></a>
+            <a href=""><span>About us</span></a>
         </div>
 
         <div class="links">
             <h6>HELPFUL LINKS</h6>
-            <a href=""><span>Services</span></a>
+            <a href=""><span>FAQs</span></a>
             <a href=""><span>Support</span></a>
+            <a href=""><span>Services</span></a>
             <a href=""><span>Privacy Policy</span></a>
             <a href=""><span>Terms & Condition</span></a>
         </div>
 
         <div class="contact">
             <h6 id="Hcontact">CONTACT</h6>
-            <i class="fas fa-map-marker-alt"><span><span class="inspan">&nbsp;</span>9, Ziyolilar str., M.Ulugbek district,
-                    Tashkent city</span></i>
-            <i class="fas fa-phone-alt"><span><span class="inspan">&nbsp;</span>+998 71 289-99-99</span></i>
-            <i class="far fa-envelope"><span><span class="inspan">&nbsp;</span>info@gmail.com</span></i>
+            <i class="fas fa-map-marker-alt"><span><span class="inspan">&nbsp;</span>9, Ziyolilar str., M.Ulugbek district, Tashkent city</span></i>
+            <i class="fas fa-phone-alt"><span><span class="inspan" style="margin-right: 12px;">&nbsp;</span>+998 71 289-99-99</span></i>
+            <span><span class="inspan" style="margin-right: 28px;">&nbsp;</span>+998 71 289-00-00</span>
+            <i class="far fa-envelope"><span><span class="inspan" style="margin-right: 12px;">&nbsp;</span>info@gmail.com</span></i>
         </div>
+
+        <div class="google-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.638337995809!2d69.33237581479513!3d41.33847710698992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDIwJzE4LjUiTiA2OcKwMjAnMDQuNCJF!5e0!3m2!1sen!2s!4v1595501098110!5m2!1sen!2s" width="400" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+
     </div>
+    
+    
 
     <div class="copyright">
-        All Right Reserved 2020, @OnlineShop
+        All Right Reserved 2020, @LaptopShop
     </div>
 </div>
 
@@ -245,7 +289,7 @@
     $(document).ready(function(){
         $("#laptop-types-list").mouseenter(function()
         {
-            $("#defoult-description")
+            $("#default-description")
             .animate({opacity: '0'}, {duration: 2000});
             
             $("#logo-image").animate
@@ -411,7 +455,6 @@
         });
     
     });
-    </script>
-
+</script>
 </body>
 </html>

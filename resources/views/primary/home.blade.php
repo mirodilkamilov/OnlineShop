@@ -37,15 +37,6 @@
         </a>
     </div>
 
-    <!--    Script for not pausing slider in bigger screens    -->
-    <script>
-        if(window.innerWidth >= 961) {
-            $('.carousel').carousel({
-                pause: false
-            })
-        }
-    </script>
-
     <h1 id="Hservices">Our services</h1>
     <div class="services">
         <div class="delivery">
@@ -88,4 +79,17 @@
             </div>
         </div>
     </div>
+
+    <!--    Uncommnet here  -->
+{{-- 
+    <!--    Script for not pausing slider in bigger screens    -->
+    <script>
+        if(window.innerWidth >= 961) {
+            $('.carousel').carousel({
+                pause: false
+            })
+        }
+    </script> 
+--}}
+
 @endsection

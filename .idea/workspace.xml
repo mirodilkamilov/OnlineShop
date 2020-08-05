@@ -4,6 +4,7 @@
     <list default="true" id="c12c2371-a2e5-4368-aa57-741f38148768" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/public/css/layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/layout.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/mainLayout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/mainLayout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/primary/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/primary/home.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,6 +215,7 @@
       <workItem from="1594204160221" duration="2116000" />
       <workItem from="1594207828079" duration="3328000" />
       <workItem from="1594797784377" duration="3000" />
+      <workItem from="1595490725113" duration="3000" />
     </task>
     <servers />
   </component>
