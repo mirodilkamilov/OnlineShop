@@ -65,7 +65,7 @@
             <li class="nav-item dropdown nav-item-first shop-link" id="dropdown">
                 <a class="nav-link text-white link" data-toggle="dropdown" href="">SHOP&nbsp;NOW<span class="fas fa-plus"></span><i class="fas fa-chevron-down"></i></a>
                 
-                <div class="dropdown-menu">
+                <div class="dropdown-menu" id="dropdown-menu">
                     <ul class="menu1-mob">
                         <span class="dropdown-header">Types of laptops depending on usage</span>
                         <li><a class="dropdown-item" href=""><img class="icons" src="/css/images/work-icon.png">Work</a></li>
@@ -75,7 +75,23 @@
                         <li><a class="dropdown-item" href=""><img class="icons" src="/css/images/creativty-icon.png">Creativity & Entertainment</a></li>
                     </ul>
 
-                    <div class="menu1-desk">
+
+                    <div class="div">
+                        <ul class="ul">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">Submenu</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Submenu action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another submenu action</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    {{-- <div class="menu1-desk">
                         <ul class="laptop-types-list" id="laptop-types-list">
                             <h5 class="dropdown-header">Types of laptops depending on usage</h5>
                             <li><a class="dropdown-item work-laptop" id="work-laptop" href=""><img class="icons" src="/css/images/work-icon.png">Work</a></li>
@@ -126,7 +142,23 @@
                                 <li>Design & engineering applications</li>
                             </ul>
                         </div>
-                    </div>
+                    </div> --}}
+                    <script>
+                        $('.dropdown-menu a.dropdown-toggle').on('click', function (e) {
+                            if (!$(this).next().hasClass('show')) {
+                                $(this).parents('.dropdown-menu').first().find('.show').removeClass('show');
+                            }
+                            var $subMenu = $(this).next('.dropdown-menu');
+                            $subMenu.toggleClass('show');
+                
+                
+                            $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function (e) {
+                                $('.dropdown-submenu .show').removeClass('show');
+                            });
+                
+                            return false;
+                        });
+                    </script>
                 </div>
             </li>
 
@@ -268,6 +300,16 @@
 <script>
     if (window.innerWidth >= 992) {
         function toggleDropdown(e) {
+            const _d = $(e.target).closest('#dropdown'),
+                _m = $('#dropdown-menu', _d);
+            setTimeout(function () {
+                const shouldOpen = e.type !== 'click' && _d.is(':hover');
+                _m.toggleClass('show', shouldOpen);
+                _d.toggleClass('show', shouldOpen);
+                $('[data-toggle="dropdown"]', _d).attr('aria-expanded', shouldOpen);
+            }, e.type === 'mouseleave' ? 300 : 0);
+        }
+        function toggleSubMenu(e) {
             const _d = $(e.target).closest('.dropdown'),
                 _m = $('.dropdown-menu', _d);
             setTimeout(function () {
@@ -278,8 +320,10 @@
             }, e.type === 'mouseleave' ? 300 : 0);
         }
         $('body')
-            .on('mouseenter mouseleave', '.dropdown', toggleDropdown)
-            .on('click', '.dropdown-menu a', toggleDropdown);
+            .on('mouseenter mouseleave', '#dropdown', toggleDropdown)
+            .on('click', '#dropdown-menu a', toggleDropdown)
+            .on('mouseenter mouseleave', '.dropdown-submenu', toggleSubMenu)
+            .on('click', '.dropdown-menu a', toggleSubMenu);
     }
 </script>
 

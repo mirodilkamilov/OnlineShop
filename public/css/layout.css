@@ -146,8 +146,8 @@ nav{
     transition: all 0.5s;
     
     max-height: 0;
-    display: block;
-    overflow: hidden;
+    display: none;
+    /* overflow: hidden; */
     opacity: 0;
     visibility: hidden;
 }
@@ -616,10 +616,31 @@ ul {
     }
     
     .dropdown-menu{
-        width: 100vw;
-        height: 377px;
+        width: auto;
+        height: auto;
     }
-    .menu1-desk{
+
+
+    .dropdown-submenu {
+        position: relative;
+    }
+
+    .dropdown-submenu a::after {
+        transform: rotate(-90deg);
+        position: absolute;
+        right: 6px;
+        top: .8em;
+    }
+
+    .dropdown-submenu .dropdown-menu {
+        top: 0;
+        left: 100%;
+        margin-left: .1rem;
+        margin-right: .1rem;
+    }
+
+
+    /* .menu1-desk{
         height: 100%;
         display: grid;
         grid-template-columns: 3fr 4fr;
@@ -689,7 +710,7 @@ ul {
     }
     .menu-description ul#default-description{
         display: block;
-    }
+    } */
 
     .contact{
         max-width: 215px;
