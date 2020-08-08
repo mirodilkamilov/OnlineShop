@@ -148,22 +148,20 @@ nav {
     background-color: #f5f5f5 !important;
 }
 
-.dropdown.show .dropdown-menu {
-    max-height: 500px;
+.dropdown.show > div.dropdown-menu {
     opacity: 1;
+    max-height: 500px;
     visibility: visible;
-    transition: all 7s;
+    transition: all 0.7s;
 }
-.dropdown .dropdown-menu {
-    /* -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -ms-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s; */
-    max-height: 0;
+
+.dropdown > div.dropdown-menu {
     opacity: 0;
+    display: block;
+    max-height: 0;
+    overflow: hidden;
     visibility: hidden;
-    transition: all 7s;
+    transition: all 0.5s;
 }
 
 .dropdown-menu {
@@ -708,22 +706,19 @@ ul {
         transform-origin: right;
     }
     .dropdown-submenu .dropdown-menu {
-        /* opacity: 0;
-        visibility: hidden; */
         height: auto;
         left: 310px !important;
         text-align: center;
     }
-    /* .dropdown-submenu .dropdown-menu.show {
-        opacity: 1;
-        visibility: visible;
-        display: grid;
-        grid-template-rows: auto auto;
-        grid-row-gap: 1rem;
-        justify-content: center;
-        align-items: center;
-        transition: all 2s;
-    } */
+    .dropdown.show > div.dropdown-menu {
+        max-height: 500px;
+        overflow: visible;
+    }
+
+    .dropdown > div.dropdown-menu {
+        max-height: 500px;
+        overflow: visible;
+    }
     .dropdown-submenu .dropdown-menu .menu-image {
         padding-top: 1rem;
     }

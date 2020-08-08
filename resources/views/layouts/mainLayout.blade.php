@@ -68,7 +68,7 @@
 
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item dropdown nav-item-first shop-link" id="dropdown">
+                <li class="nav-item dropdown nav-item-first shop-link">
                     <a class="nav-link text-white link" data-toggle="dropdown" href="">SHOP&nbsp;NOW<span
                             class="fas fa-plus"></span><i class="fas fa-chevron-down"></i></a>
 
@@ -186,70 +186,6 @@
                             </ul>
                         </div>
 
-
-                        {{-- <div class="menu1-desk">
-                            <ul class="laptop-types-list" id="laptop-types-list">
-                                <h5 class="dropdown-header">Types of laptops depending on usage</h5>
-                                <li><a class="dropdown-item work-laptop" id="work-laptop" href=""><img class="icons"
-                                            src="/css/images/work-icon.png">Work</a></li>
-
-                                <li><a class="dropdown-item everyday-laptop" id="everyday-laptop" href=""><img
-                                            class="icons" src="/css/images/everyday-icon.png">Everyday Use</a></li>
-
-                                <li><a class="dropdown-item gaming-laptop" id="gaming-laptop" href=""><img class="icons"
-                                            src="/css/images/gaming-icon.png">Gaming</a></li>
-
-                                <li><a class="dropdown-item student-laptop" id="student-laptop" href=""><img
-                                            class="icons" src="/css/images/student-icon.png">Student</a></li>
-
-                                <li><a class="dropdown-item creativity-laptop" id="creativity-laptop" href=""><img
-                                            class="icons" src="/css/images/creativty-icon.png">Creativity &
-                                        Entertainment</a></li>
-                            </ul>
-                            <div class="menu-image">
-                                <img class="logo-image" id="logo-image" src="/css/images/logo.png" alt="logo">
-                                <img class="work-laptop-image" id="work-laptop-image" src="/css/images/work-laptop.jpg"
-                                    alt="">
-                                <img class="everyday-laptop-image" id="everyday-laptop-image"
-                                    src="/css/images/everyday-laptop.jpg" alt="">
-                                <img class="gaming-laptop-image" id="gaming-laptop-image"
-                                    src="/css/images/gaming-laptop.png" alt="">
-                                <img class="student-laptop-image" id="student-laptop-image"
-                                    src="/css/images/student-laptop.jpg" alt="">
-                                <img class="creativity-laptop-image" id="creativity-laptop-image"
-                                    src="/css/images/creativity-laptop.jpg" alt="">
-                            </div>
-                            <div class="menu-description">
-                                <ul id="default-description">
-                                    <li>Stay Home and Save the World</li>
-                                </ul>
-                                <ul id="work-description">
-                                    <li>Videoconferencing</li>
-                                    <li>Spreadsheets & reports</li>
-                                    <li>Competitive Research</li>
-                                </ul>
-                                <ul id="everyday-description">
-                                    <li>Keep up with friends & family</li>
-                                    <li>Watch videos online</li>
-                                    <li>Internet Surfing</li>
-                                </ul>
-                                <ul id="gaming-description">
-                                    <li>MMORPGs & 1st-person shooters</li>
-                                    <li>Graphics-intensive gaming</li>
-                                    <li>Immersive sound & graphics</li>
-                                </ul>
-                                <ul id="student-description">
-                                    <li>Rugged & durable</li>
-                                    <li>Homework & reports</li>
-                                    <li>Videoconferencing</li>
-                                </ul>
-                                <ul id="creativity-description">
-                                    <li>Photo / video editing</li>
-                                    <li>Music / sound mixing</li>
-                                    <li>Design & engineering applications</li>
-                                </ul>
-                            </div>
-                        </div> --}}
                         <script>
                             $('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
                                 if (!$(this).next().hasClass('show')) {
@@ -275,7 +211,7 @@
                     <a class="nav-link services-link" data-toggle="dropdown" role="button" aria-haspopup="true"
                         aria-expanded="false" href="">Services
                         <span class="fas fa-plus"></span><i class="fas fa-chevron-down"></i></a>
-                    <div class="dropdown-menu">
+                    <div class="dropdown-menu" id="dropdown-menu2">
                         <ul class="menu2">
                             <span class="dropdown-header">We are at your service</span>
                             <li><a class="dropdown-item" href=""><i class="fas fa-shipping-fast"></i>Delivery</a></li>
@@ -416,222 +352,44 @@
 
     <!--    Hover navbar element to show dropdown menu   -->
     <script>
-        if (window.innerWidth >= 992) {
-            function toggleDropdown(e) {
-                const _d = $(e.target).closest('#dropdown'),
-                    _m = $('#dropdown-menu', _d);
-                setTimeout(function() {
-                    const shouldOpen = e.type !== 'click' && _d.is(':hover');
-                    _m.toggleClass('show', shouldOpen);
-                    _d.toggleClass('show', shouldOpen);
-                    $('[data-toggle="dropdown"]', _d).attr('aria-expanded', shouldOpen);
-                }, e.type === 'mouseleave' ? 300 : 0);
-            }
+        function resize() {
 
-            function toggleSubMenu(e) {
-                const _d = $(e.target).closest('.dropdown-submenu'),
-                    _m = $('.dropdown-menu', _d);
-                setTimeout(function() {
-                    const shouldOpen = e.type !== 'click' && _d.is(':hover');
-                    _m.toggleClass('show', shouldOpen);
-                    _d.toggleClass('show', shouldOpen);
-                    $('[data-toggle="dropdown"]', _d).attr('aria-expanded', shouldOpen);
-                }, e.type === 'mouseleave' ? 300 : 0);
+            if (window.innerWidth >= 992) {
+
+                function toggleDropdown(e) {
+                    const _d = $(e.target).closest('.dropdown'),
+                        _m = $('#dropdown-menu', _d);
+                    setTimeout(function() {
+                        const shouldOpen = e.type !== 'click' && _d.is(':hover');
+                        _m.toggleClass('show', shouldOpen);
+                        _d.toggleClass('show', shouldOpen);
+                        $('[data-toggle="dropdown"]', _d).attr('aria-expanded', shouldOpen);
+                    }, e.type === 'mouseleave' ? 300 : 0);
+                }
+
+                function toggleSubMenu(e) {
+                    const _d = $(e.target).closest('.dropdown-submenu'),
+                        _m = $('.dropdown-menu', _d);
+                    setTimeout(function() {
+                        const shouldOpen = e.type !== 'click' && _d.is(':hover');
+                        _m.toggleClass('show', shouldOpen);
+                        _d.toggleClass('show', shouldOpen);
+                        $('[data-toggle="dropdown"]', _d).attr('aria-expanded', shouldOpen);
+                    }, e.type === 'mouseleave' ? 300 : 0);
+                }
+                $('body')
+                    .on('mouseenter mouseleave', '.dropdown', toggleDropdown)
+                    .on('click', '#dropdown-menu a', toggleDropdown)
+                    .on('click', '#dropdown-menu2 a', toggleDropdown)
+                    .on('mouseenter mouseleave', '.dropdown-submenu', toggleSubMenu)
+                    .on('click', '.dropdown-menu a', toggleSubMenu);
             }
-            $('body')
-                .on('mouseenter mouseleave', '#dropdown', toggleDropdown)
-                .on('click', '#dropdown-menu a', toggleDropdown)
-                .on('mouseenter mouseleave', '.dropdown-submenu', toggleSubMenu)
-                .on('click', '.dropdown-menu a', toggleSubMenu);
         }
+        resize();
+        $(window).resize(resize);
 
     </script>
 
-    <!--    Script for animating images and description in dropdown-menu on hover   -->
-    {{-- <script>
-        $(document).ready(function() {
-            // $("#laptop-types-list").mouseenter(function() {
-            //     $("#default-description")
-            //         .animate({
-            //             opacity: '0'
-            //         }, {
-            //             duration: 2000
-            //         });
-
-            //     $("#logo-image").animate({
-            //         opacity: '0'
-            //     }, {
-            //         duration: 2000
-            //     });
-            // });
-
-            // $("#laptop-types-list").mouseleave(function() {
-            //     $("#default-description").animate({
-            //         opacity: '1'
-            //     }, {
-            //         duration: 1200
-            //     });
-            //     $("#logo-image").animate({
-            //         opacity: '1'
-            //     }, {
-            //         duration: 1200
-            //     });
-            // });
-
-            $("#work-laptop").mouseenter(function() {
-                $("#work-laptop-image").show(1000).animate({
-                    opacity: '1'
-                }, {
-                    duration: 1200,
-                    queue: false
-                });
-                $("#work-description").show(1000).animate({
-                    opacity: '1'
-                }, {
-                    duration: 1200,
-                    queue: false
-                });
-            });
-
-            $("#work-laptop").mouseleave(function() {
-                $("#work-laptop-image").animate({
-                    opacity: '0'
-                }, {
-                    duration: 1200,
-                    queue: false
-                });
-                $("#work-description").animate({
-                    opacity: '0'
-                }, {
-                    duration: 1200,
-                    queue: false
-                });
-            });
-
-            $("#everyday-laptop").mouseenter(function() {
-                $("#everyday-laptop-image").show(1000).animate({
-                    opacity: '1'
-                }, {
-                    duration: 1200,
-                    queue: false
-                });
-                $("#everyday-description").show(1000).animate({
-                    opacity: '1'
-                }, {
-                    duration: 1200,
-                    queue: false
-                });
-            });
-
-            $("#everyday-laptop").mouseleave(function() {
-                $("#everyday-laptop-image").animate({
-                    opacity: '0'
-                }, {
-                    duration: 1200,
-                    queue: false
-                });
-                $("#everyday-description").animate({
-                    opacity: '0'
-                }, {
-                    duration: 1200,
-                    queue: false
-                });
-            });
-
-
-            $("#gaming-laptop").mouseenter(function() {
-                $("#gaming-laptop-image").show(1000).animate({
-                    opacity: '1'
-                }, {
-                    duration: 1200,
-                    queue: false
-                });
-                $("#gaming-description").show(1000).animate({
-                    opacity: '1'
-                }, {
-                    duration: 1200,
-                    queue: false
-                });
-            });
-
-            $("#gaming-laptop").mouseleave(function() {
-                $("#gaming-laptop-image").animate({
-                    opacity: '0'
-                }, {
-                    duration: 1200,
-                    queue: false
-                });
-                $("#gaming-description").animate({
-                    opacity: '0'
-                }, {
-                    duration: 1200,
-                    queue: false
-                });
-            });
-
-            $("#student-laptop").mouseenter(function() {
-                $("#student-laptop-image").show(1000).animate({
-                    opacity: '1'
-                }, {
-                    duration: 1200,
-                    queue: false
-                });
-                $("#student-description").show(1000).animate({
-                    opacity: '1'
-                }, {
-                    duration: 1200,
-                    queue: false
-                });
-            });
-
-            $("#student-laptop").mouseleave(function() {
-                $("#student-laptop-image").animate({
-                    opacity: '0'
-                }, {
-                    duration: 1200,
-                    queue: false
-                });
-                $("#student-description").animate({
-                    opacity: '0'
-                }, {
-                    duration: 1200,
-                    queue: false
-                });
-            });
-
-            $("#creativity-laptop").mouseenter(function() {
-                $("#creativity-laptop-image").show(1000).animate({
-                    opacity: '1'
-                }, {
-                    duration: 1200,
-                    queue: false
-                });
-                $("#creativity-description").show(1000).animate({
-                    opacity: '1'
-                }, {
-                    duration: 1200,
-                    queue: false
-                });
-            });
-
-            $("#creativity-laptop").mouseleave(function() {
-                $("#creativity-laptop-image").animate({
-                    opacity: '0'
-                }, {
-                    duration: 1200,
-                    queue: false
-                });
-                $("#creativity-description").animate({
-                    opacity: '0'
-                }, {
-                    duration: 1200,
-                    queue: false
-                });
-            });
-
-        });
-
-    </script> --}}
 </body>
 
 </html>
