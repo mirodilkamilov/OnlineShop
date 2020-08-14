@@ -9,8 +9,7 @@
 
     <link rel="stylesheet" href="css/layout.css">
 
-    <!--        google fonts: Montserrat and Italianno (for only logo text)  -->
-    <!--<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">-->
+    <!--        google font: Italianno (for only logo text)  -->
     <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
 
     <!--        font awesome 5.13.1    -->
@@ -27,6 +26,10 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 
+    <!--        GSAP Scroll Trigger (animating layout on scroll)     -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/ScrollTrigger.min.js"></script>
+
     <title>LaptopShop</title>
 
 </head>
@@ -38,11 +41,11 @@
             <img src="/css/images/logo.png" alt="logo" width="70px" height="48px" class="d-inline-block align-top"
                 loading="lazy">
             <span class="logo-name">LaptopShop</span>
-
         </a>
 
         <button class="navbar-toggler" id="menu-button" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <!--    Hamburger menu      -->
             <div class="menu-button">
                 <span id="first-line"></span>
                 <span id="second-line"></span>
@@ -50,6 +53,7 @@
             </div>
         </button>
 
+        <!--    Adding animating classes on hamburger menu click     -->
         <script>
             $(document).ready(function() {
                 $("#menu-button").click(function() {
@@ -61,47 +65,43 @@
 
         </script>
 
-        {{-- <button class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button> --}}
-
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item dropdown nav-item-first shop-link">
-                    <a class="nav-link text-white link" data-toggle="dropdown" href="">SHOP&nbsp;NOW<span
+                    <!--    Remove data-toggle  -->
+                    <a class="nav-link link" data-toggle="dropdown" href="">SHOP&nbsp;NOW<span
                             class="fas fa-plus"></span><i class="fas fa-chevron-down"></i></a>
 
                     <div class="dropdown-menu" id="dropdown-menu">
+                        <!--    Shop dropdown menu mobile version    -->
                         <ul class="menu1-mob">
                             <span class="dropdown-header">Types of laptops depending on usage</span>
                             <li><a class="dropdown-item" href=""><img class="icons"
-                                        src="/css/images/work-icon.png">Work</a></li>
+                                        src="/css/images/work-icon.svg">Work</a></li>
                             <li><a class="dropdown-item" href=""><img class="icons"
-                                        src="/css/images/everyday-icon.png">Everyday Use</a></li>
+                                        src="/css/images/everyday-icon.svg">Everyday Use</a></li>
                             <li><a class="dropdown-item" href=""><img class="icons"
-                                        src="/css/images/gaming-icon.png">Gaming</a></li>
+                                        src="/css/images/gaming-icon.svg">Gaming</a></li>
                             <li><a class="dropdown-item" href=""><img class="icons"
-                                        src="/css/images/student-icon.png">Student</a></li>
+                                        src="/css/images/student-icon.svg">Student</a></li>
                             <li><a class="dropdown-item" href=""><img class="icons"
-                                        src="/css/images/creativty-icon.png">Creativity & Entertainment</a></li>
+                                        src="/css/images/creativty-icon.svg">Creativity & Entertainment</a></li>
                         </ul>
 
-
+                        <!--    Shop dropdown menu desktop version    -->
                         <div class="menu1-desk">
-                            <ul class="laptop-types-list" id="laptop-types-list">
+                            <ul class="laptop-types-list">
                                 <h5 class="dropdown-header">Types of laptops depending on usage</h5>
                                 <li class="dropdown-submenu">
-                                    <a class="dropdown-item work-laptop" id="work-laptop" href=""><img class="icons"
-                                            src="/css/images/work-icon.png">Work
+                                    <a class="dropdown-item" href=""><img class="icons"
+                                            src="/css/images/work-icon.svg">Work
                                     </a>
                                     <ul class="dropdown-menu">
                                         <div class="menu-image">
-                                            <img class="work-laptop-image" id="work-laptop-image"
-                                                src="/css/images/work-laptop.jpg" alt="">
+                                            <img src="/css/images/work-laptop.jpg" alt="">
                                         </div>
                                         <div class="menu-description">
-                                            <ul id="work-description">
+                                            <ul>
                                                 <li>Videoconferencing</li>
                                                 <li>Spreadsheets & reports</li>
                                                 <li>Competitive Research</li>
@@ -111,16 +111,15 @@
                                 </li>
 
                                 <li class="dropdown-submenu">
-                                    <a class="dropdown-item everyday-laptop" id="everyday-laptop" href=""><img
-                                            class="icons" src="/css/images/everyday-icon.png">Everyday Use
+                                    <a class="dropdown-item" href=""><img class="icons"
+                                            src="/css/images/everyday-icon.svg">Everyday Use
                                     </a>
                                     <ul class="dropdown-menu">
                                         <div class="menu-image">
-                                            <img class="everyday-laptop-image" id="everyday-laptop-image"
-                                                src="/css/images/everyday-laptop.jpg" alt="">
+                                            <img src="/css/images/everyday-laptop.jpg" alt="">
                                         </div>
                                         <div class="menu-description">
-                                            <ul id="everyday-description">
+                                            <ul>
                                                 <li>Keep up with friends & family</li>
                                                 <li>Watch videos online</li>
                                                 <li>Internet Surfing</li>
@@ -130,15 +129,14 @@
                                 </li>
 
                                 <li class="dropdown-submenu">
-                                    <a class="dropdown-item gaming-laptop" id="gaming-laptop" href=""><img class="icons"
-                                            src="/css/images/gaming-icon.png">Gaming</a>
+                                    <a class="dropdown-item" href=""><img class="icons"
+                                            src="/css/images/gaming-icon.svg">Gaming</a>
                                     <ul class="dropdown-menu">
                                         <div class="menu-image">
-                                            <img class="gaming-laptop-image" id="gaming-laptop-image"
-                                                src="/css/images/gaming-laptop.png" alt="">
+                                            <img src="/css/images/gaming-laptop.png" alt="">
                                         </div>
                                         <div class="menu-description">
-                                            <ul id="gaming-description">
+                                            <ul>
                                                 <li>MMORPGs & 1st-person shooters</li>
                                                 <li>Graphics-intensive gaming</li>
                                                 <li>Immersive sound & graphics</li>
@@ -148,15 +146,14 @@
                                 </li>
 
                                 <li class="dropdown-submenu">
-                                    <a class="dropdown-item student-laptop" id="student-laptop" href=""><img
-                                            class="icons" src="/css/images/student-icon.png">Student</a>
+                                    <a class="dropdown-item" href=""><img class="icons"
+                                            src="/css/images/student-icon.svg">Student</a>
                                     <ul class="dropdown-menu">
                                         <div class="menu-image">
-                                            <img class="student-laptop-image" id="student-laptop-image"
-                                                src="/css/images/student-laptop.jpg" alt="">
+                                            <img src="/css/images/student-laptop.jpg" alt="">
                                         </div>
                                         <div class="menu-description">
-                                            <ul id="student-description">
+                                            <ul>
                                                 <li>Rugged & durable</li>
                                                 <li>Homework & reports</li>
                                                 <li>Videoconferencing</li>
@@ -166,16 +163,15 @@
                                 </li>
 
                                 <li class="dropdown-submenu">
-                                    <a class="dropdown-item creativity-laptop" id="creativity-laptop" href=""><img
-                                            class="icons" src="/css/images/creativty-icon.png">Creativity &
+                                    <a class="dropdown-item" href=""><img class="icons"
+                                            src="/css/images/creativty-icon.svg">Creativity &
                                         Entertainment</a>
                                     <ul class="dropdown-menu">
                                         <div class="menu-image">
-                                            <img class="creativity-laptop-image" id="creativity-laptop-image"
-                                                src="/css/images/creativity-laptop.jpg" alt="">
+                                            <img src="/css/images/creativity-laptop.jpg" alt="">
                                         </div>
                                         <div class="menu-description">
-                                            <ul id="creativity-description">
+                                            <ul>
                                                 <li>Photo / video editing</li>
                                                 <li>Music / sound mixing</li>
                                                 <li>Design & engineering applications</li>
@@ -186,6 +182,7 @@
                             </ul>
                         </div>
 
+                        <!--    Showing submenu     -->
                         <script>
                             $('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
                                 if (!$(this).next().hasClass('show')) {
@@ -214,10 +211,17 @@
                     <div class="dropdown-menu" id="dropdown-menu2">
                         <ul class="menu2">
                             <span class="dropdown-header">We are at your service</span>
-                            <li><a class="dropdown-item" href=""><i class="fas fa-shipping-fast"></i>Delivery</a></li>
-                            <li><a class="dropdown-item" href=""><i class="fas fa-shield-alt"></i>Guarantee</a></li>
-                            <li><a class="dropdown-item" href=""><i class="fas fa-medkit"></i>Product service</a></li>
-                            <li><a class="dropdown-item" href=""><i class="fas fa-comments-dollar"></i>Pay any way</a>
+                            <li><a class="dropdown-item" href=""><img class="icons"
+                                        src="/css/images/delivery.svg">Delivery</a>
+                            </li>
+                            <li><a class="dropdown-item" href=""><img class="icons"
+                                        src="/css/images/guarantee.svg">Guarantee</a>
+                            </li>
+                            <li><a class="dropdown-item" href=""><img class="icons"
+                                        src="/css/images/support.svg">Product service</a>
+                            </li>
+                            <li><a class="dropdown-item" href=""><img class="icons" src="/css/images/pay-icon.svg">Pay
+                                    any way</a>
                             </li>
                         </ul>
                     </div>
@@ -234,22 +238,16 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/register">Register</a>
                 </li>
-                <li class="nav-item nav-item-last">
+                <li class="nav-item">
                     <a class="nav-link" href="/login">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/register">Register</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="">About</a>
                 </li>
             </ul>
-            <script>
-                $('#dropdown').on('show.bs.dropdown', function() {
-                    $(this).find('#dropdown-menu').first().stop(true, true).slideDown();
-                });
-                $('#dropdown').on('hide.bs.dropdown', function() {
-                    $(this).find('#dropdown-menu').first().stop(true, true).slideUp();
-                });
-
-            </script>
         </div>
     </nav>
     @yield('content')
@@ -358,7 +356,7 @@
 
                 function toggleDropdown(e) {
                     const _d = $(e.target).closest('.dropdown'),
-                        _m = $('#dropdown-menu', _d);
+                        _m = $('div.dropdown-menu', _d);
                     setTimeout(function() {
                         const shouldOpen = e.type !== 'click' && _d.is(':hover');
                         _m.toggleClass('show', shouldOpen);
@@ -369,7 +367,7 @@
 
                 function toggleSubMenu(e) {
                     const _d = $(e.target).closest('.dropdown-submenu'),
-                        _m = $('.dropdown-menu', _d);
+                        _m = $('ul.dropdown-menu', _d);
                     setTimeout(function() {
                         const shouldOpen = e.type !== 'click' && _d.is(':hover');
                         _m.toggleClass('show', shouldOpen);
@@ -379,10 +377,9 @@
                 }
                 $('body')
                     .on('mouseenter mouseleave', '.dropdown', toggleDropdown)
-                    .on('click', '#dropdown-menu a', toggleDropdown)
-                    .on('click', '#dropdown-menu2 a', toggleDropdown)
+                    .on('click', 'div.dropdown-menu a', toggleDropdown)
                     .on('mouseenter mouseleave', '.dropdown-submenu', toggleSubMenu)
-                    .on('click', '.dropdown-menu a', toggleSubMenu);
+                    .on('click', 'ul.dropdown-menu a', toggleSubMenu);
             }
         }
         resize();
