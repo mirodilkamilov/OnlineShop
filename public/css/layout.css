@@ -1,10 +1,10 @@
 /*      Basic CSS       */
-
 html,
 body {
     margin: 0;
     padding: 0;
     width: 100%;
+    overflow-x: hidden;
 }
 
 /*      Navbar      */
@@ -114,7 +114,8 @@ nav {
     font-weight: 500;
 }
 
-.navbar-nav:nth-child(1) .nav-item:nth-child(4) {
+.navbar-nav:nth-child(1) .nav-item:nth-child(4),
+.navbar-nav:nth-child(2) .nav-item:nth-child(3) {
     display: none;
 }
 
@@ -148,34 +149,26 @@ nav {
     background-color: #f5f5f5 !important;
 }
 
-.dropdown.show .dropdown-menu {
-    max-height: 500px;
+.dropdown.show > div.dropdown-menu {
     opacity: 1;
+    max-height: 500px;
     visibility: visible;
-    transition: all 7s;
+    transition: all 0.7s;
 }
-.dropdown .dropdown-menu {
-    /* -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -ms-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s; */
-    max-height: 0;
+
+.dropdown > div.dropdown-menu {
     opacity: 0;
+    display: block;
+    max-height: 0;
+    overflow: hidden;
     visibility: hidden;
-    transition: all 7s;
+    transition: all 0.3s;
 }
 
-.dropdown-menu {
-    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.08), 0 2px 30px rgba(0, 0, 0, 0.2),
-        0 4px 80px rgba(0, 0, 0, 0.3);
+.dropdown div#dropdown-menu,
+.dropdown div#dropdown-menu2 {
+    box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.3);
     background-clip: border-box !important;
-}
-
-.dropdown-item .icons {
-    float: left;
-    width: 1.5rem;
-    height: 1.5rem;
 }
 
 .fa-plus {
@@ -200,26 +193,36 @@ nav {
 .menu1-mob > .dropdown-header,
 .menu2 > .dropdown-header {
     text-align: center !important;
-    padding: 0 0 0.4rem 0 !important;
+    padding: 0 0 0.4rem 0;
 }
 
 .menu1-mob .dropdown-item,
 .menu2 .dropdown-item {
     background-color: white;
-    border-radius: 15px !important;
+    border-radius: 15px;
     margin-top: 0.5rem;
     padding: 0.25rem 1rem;
 }
 
 .dropdown-item .fas,
 .dropdown-item .far {
-    float: left !important;
     padding-top: 4px;
 }
 
-.dropdown-item:active {
+.dropdown-item:active,
+.dropdown-item:hover {
     background-color: #636b6f !important;
     color: #fff !important;
+}
+.dropdown-item .icons {
+    float: left;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.dropdown-item:hover .icons {
+    filter: invert(100%) sepia(0%) saturate(7452%) hue-rotate(130deg)
+        brightness(119%) contrast(100%);
 }
 
 .menu1-desk {
@@ -529,7 +532,6 @@ ul {
     margin-top: 1rem;
     background-color: #3f484c;
     height: 2rem;
-    /*6vh*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -636,11 +638,22 @@ ul {
 @media (min-width: 992px) {
     /*  Bootstarap version     */
     .navbar {
-        padding: 0 1rem 0 1.5rem !important;
+        padding: 0 1.5rem 0 1.5rem !important;
     }
-    .nav-link:hover {
-        background-color: white !important;
-        color: black !important;
+    .navbar-nav > .show .nav-link {
+        background-color: white;
+        color: #3d5af1 !important;
+    }
+    .nav-item .nav-link:hover {
+        background-color: white;
+        color: #3d5af1 !important;
+    }
+    .navbar-nav:nth-child(2) .nav-item:nth-child(3) > .nav-link {
+        background-color: #1882df;
+        color: #fff !important;
+    }
+    .navbar-nav:nth-child(2) .nav-item:nth-child(3) > .nav-link:hover {
+        transform: scale(1.02);
     }
     .nav-link .fa-chevron-down {
         display: block;
@@ -649,12 +662,15 @@ ul {
     .navbar-nav:nth-child(1) .nav-item:nth-child(2) .nav-link {
         padding-left: 0.5rem;
     }
-    .navbar-nav:nth-child(1) .nav-item:nth-child(4) {
+    .navbar-nav:nth-child(1) .nav-item:nth-child(4),
+    .navbar-nav:nth-child(2) .nav-item:nth-child(3) {
         display: block;
     }
-    .navbar-nav:nth-child(2) .nav-item:nth-child(3) {
+    .navbar-nav:nth-child(2) .nav-item:nth-child(4),
+    .navbar-nav:nth-child(2) .nav-item:nth-child(1) {
         display: none;
     }
+
     .logo-name {
         padding-left: 0.1rem;
     }
@@ -670,109 +686,99 @@ ul {
     .fa-plus {
         display: none !important;
     }
-    .dropdown-menu {
-        box-shadow: none;
+    div#dropdown-menu {
+        left: 214.125px;
         width: 310px;
-        height: 300px;
+        height: 344px;
     }
     .menu-image img {
         width: 250px;
         height: 200px;
     }
-    .menu1-desk {
+    .menu1-desk,
+    .menu2 {
         height: 100%;
         display: flex;
-        justify-items: center;
-        align-items: center;
         text-align: center;
     }
-    .menu1-desk .laptop-types-list {
+    .menu1-desk .laptop-types-list,
+    .menu2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 1.5rem 0;
         width: 100%;
     }
     .menu1-desk .laptop-types-list > .dropdown-header,
     .menu2 > .dropdown-header {
         font-size: 1rem;
-        padding: 0rem 1rem 1rem 1rem;
+        padding: 0rem 1rem 0.5rem 1rem;
         font-weight: 600;
     }
     .menu1-desk .laptop-types-list .dropdown-item,
     .menu2 .dropdown-item {
         padding: 0.5rem 1rem;
+        border-radius: 0;
         font-weight: 500 !important;
+        box-shadow: inset 0 0 0 0.01px #fff;
+        background: transparent;
     }
     .menu1-desk .laptop-types-list .dropdown-item:hover,
     .menu2 .dropdown-item:hover {
+        background: transparent;
         color: #fff;
-        background-color: #636b6f;
-        transition: background-color 2s, color 1s;
-        transform-origin: right;
+        box-shadow: inset 310px 0 0 0.01px #636b6f;
+        transition: box-shadow 0.7s, color 0.3s;
+    }
+    .dropdown.show > div.dropdown-menu {
+        max-height: 500px;
+        overflow: visible;
+    }
+    .dropdown > div.dropdown-menu {
+        max-height: 500px;
+        overflow: visible;
     }
     .dropdown-submenu .dropdown-menu {
-        /* opacity: 0;
-        visibility: hidden; */
+        width: 298px;
         height: auto;
         left: 310px !important;
         text-align: center;
+        box-shadow: 5px 5px 10px -2.5px rgba(0, 0, 0, 0.3),
+            0 0 2px rgba(0, 0, 0, 0.25);
     }
-    /* .dropdown-submenu .dropdown-menu.show {
-        opacity: 1;
-        visibility: visible;
+    .dropdown-submenu.show .dropdown-menu {
         display: grid;
-        grid-template-rows: auto auto;
-        grid-row-gap: 1rem;
-        justify-content: center;
-        align-items: center;
-        transition: all 2s;
-    } */
+        grid-template-rows: 224px auto;
+        grid-row-gap: 1.5rem;
+    }
+    .dropdown-submenu.show .dropdown-menu .menu-description {
+        padding-bottom: 1.5rem;
+    }
     .dropdown-submenu .dropdown-menu .menu-image {
-        padding-top: 1rem;
+        padding-top: 1.5rem;
     }
 
-    /*.menu-image img{
-        position: absolute;
-        top: 2rem;
-        right: calc((100vw - 437.5px) / 3.5);
-        display: none;
-        width: 250px;
-        height: 200px;
-    }
-    .menu-image .logo-image{
-        display: block;
-    }
-    .menu-description{
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        line-height: 1.7;
-        padding-top: 2rem;
-    }
-    .menu-description ul{
-        width: 244px;
-        display: none;
-        position: absolute;
-        right: calc((100vw - 427px) / 3.5);
-        
-    }
-    .menu-description ul#default-description{
-        display: block;
-    } */
     .dropdown-submenu {
         position: relative;
     }
-    .laptop-types-list > .dropdown-submenu:nth-child(2) .dropdown-menu {
+    .dropdown-submenu:nth-child(2) .dropdown-menu {
         top: -68px;
     }
-    .laptop-types-list > .dropdown-submenu:nth-child(3) .dropdown-menu {
-        top: -108px;
+    .dropdown-submenu:nth-child(3) .dropdown-menu {
+        top: -120px;
     }
-    .laptop-types-list > .dropdown-submenu:nth-child(4) .dropdown-menu {
-        top: -148px;
+    .dropdown-submenu:nth-child(4) .dropdown-menu {
+        top: -171px;
     }
-    .laptop-types-list > .dropdown-submenu:nth-child(5) .dropdown-menu {
-        top: -188px;
+    .dropdown-submenu:nth-child(5) .dropdown-menu {
+        top: -223px;
     }
-    .laptop-types-list > .dropdown-submenu:nth-child(6) .dropdown-menu {
-        top: -228px;
+    .dropdown-submenu:nth-child(6) .dropdown-menu {
+        top: -274px;
+    }
+    div#dropdown-menu2 {
+        width: 310px;
+        left: 316.3px;
     }
 
     .contact {

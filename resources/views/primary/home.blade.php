@@ -81,15 +81,67 @@
     </div>
 
     <!--    Uncommnet here  -->
-{{-- 
+    {{--
     <!--    Script for not pausing slider in bigger screens    -->
     <script>
-        if(window.innerWidth >= 961) {
+        if (window.innerWidth >= 961) {
             $('.carousel').carousel({
                 pause: false
             })
         }
-    </script> 
---}}
+
+    </script>
+    --}}
+
+    <script>
+        let first = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".delivery",
+                start: "center bottom"
+            }
+        });
+        let second = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".guarantee",
+                start: "center bottom"
+            }
+        });
+        let third = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".pay",
+                start: "center bottom"
+            }
+        });
+        let fourth = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".support",
+                start: "center bottom"
+            }
+        });
+
+        first.from(".delivery", {
+            x: -200,
+            opacity: 0,
+            duration: 0.7
+        })
+        second.from(".guarantee", {
+            x: 200,
+            opacity: 0,
+            duration: 0.7,
+            delay: 0.3
+        })
+        third.from(".pay", {
+            x: -200,
+            opacity: 0,
+            duration: 0.7
+        })
+        fourth.from(".support", {
+            x: 200,
+            opacity: 0,
+            duration: 0.7,
+            delay: 0.3
+        })
+
+    </script>
 
 @endsection
